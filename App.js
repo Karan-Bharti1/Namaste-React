@@ -1,7 +1,19 @@
 import React from "react"
 import ReactDOM from 'react-dom/client'
-const parent=React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},[React.createElement("h1",{id:"heading"},"I am H1 tag"),React.createElement("h2",{id:"heading"},"I am H2 tag")]))
+const number=1000
+const elem=<span>You Got it</span>
+const Title=()=>{
+    return (<h1> {number}
+        React Using JSX {elem}
+        </h1>)
+}
+const HeadingFunctionalComponent=()=>(
+    <div>
+        <Title/>
+     <h1>Heading Functional Component </h1>
+    </div>
+)
+const jsxHeading=<h1 className="heading">H1 using Jsx</h1>;// ReactElement using JSX
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
-
-const root=ReactDOM.createRoot(document.getElementById("root"))
-root.render(parent)
+root.render(<HeadingFunctionalComponent/>)
