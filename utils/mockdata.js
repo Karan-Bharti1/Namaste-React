@@ -1,5 +1,3 @@
-import React from "react"
-import ReactDOM from 'react-dom/client'
 const restObj= [
     {
       "info": {
@@ -347,48 +345,4 @@ const restObj= [
       },
       "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }]
-const Header=()=>{
-    return <div className="header">
-<div className="logo-container">
-    <img className="logo" src="https://i.etsystatic.com/22467704/r/il/cc9dd4/2649320480/il_570xN.2649320480_9w9j.jpg"/>
-</div>
-<div className="nav-items">
-<ul>
-    <li>Home</li>
-    <li>About Us</li>
-    <li>Contact Us</li>
-    <li>Cart</li>
-</ul>
-</div>
-    </div>
-}
-const RestaurantCard=({restData})=>{ 
-  const {name,cuisines,avgRating,costForTwo}=restData?.info
-   return <div className="restaurant-card">
-    <img className="restaurant-image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restData.info.cloudinaryImageId}/>
-<h3 className="restaurant-name">{name}</h3>
-<h5>{cuisines.join(" , ")}</h5>
-<h5>{avgRating} stars</h5>
-<h5>{costForTwo}</h5>
-    </div>
-    }
-
-
-const Body=()=>{
-return <div className="body">
-<div className="search">Search</div>
-<div className="res-container">
-{restObj.map(res => 
-  <RestaurantCard key={res.info.id}restData={res}/>)}
-</div>
-
-</div>
-}
-const AppLayout=()=>{
-    return <div className="app">
-<Header/>
-<Body/>
-    </div>
-}
- const root=ReactDOM.createRoot(document.getElementById("root"))
- root.render(<AppLayout/>)
+    export default restObj;
