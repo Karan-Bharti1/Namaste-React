@@ -1,4 +1,4 @@
-const restObj= [
+let restObj= [
     {
       "info": {
         "id": "718482",
@@ -13,7 +13,7 @@ const restObj= [
           "Tibetan",
           "Desserts"
         ],
-        "avgRating": 4.3,
+        "avgRating": 3,
         "parentId": "61955",
         "avgRatingString": "4.3",
         "totalRatingsString": "960",
