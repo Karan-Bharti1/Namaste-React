@@ -106,3 +106,20 @@ margin:8px;
  background-color: whitesmoke;
  border-radius: 5px 5px;
 }
+.rest-intro-card{
+    color: black;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+.rest-info-card{
+display: flex;
+align-items: center;
+justify-content: space-around;
+color: red;
+}
+.cuisines-tag{
+text-align: center;
+}

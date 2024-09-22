@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useState,useEffect } from "react";
@@ -35,7 +36,7 @@ return filteredData.length === 0?<Shimmer/>: <div className="body">
     </div>
     <div className="res-container">
     {filteredData.map(res => 
-      <RestaurantCard key={res.info.id} restData={res}/>)}
+    <Link k to={"/restaurants/"+res.info.id}><RestaurantCard key={res.info.id} restData={res}/></Link>  )}
     </div>
     
     </div>
